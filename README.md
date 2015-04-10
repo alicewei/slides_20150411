@@ -4,4 +4,4 @@
 --
   - [slides](http://alicewei.github.io/slides_20150411/)
   - [download Psd](http://goo.gl/FX5rWa)
-  - [download sample](XXX)
+  - [download sample](http://goo.gl/n1q5Uv)
