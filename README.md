@@ -3,5 +3,6 @@
 使用reveal.js製作簡報 / 20150411
 --
   - [slides](http://alicewei.github.io/slides_20150411/)
+  - [webpage layout完成](http://alicewei.github.io/web_fullPage_tutorial/)
   - [download Psd](http://goo.gl/FX5rWa)
-  - [download sample](XXX)
+  - [download sample](http://goo.gl/h9z6Qt)
