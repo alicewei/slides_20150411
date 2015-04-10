@@ -1,0 +1,40 @@
+.slides h2 {
+	color: #fd6b83;
+}
+.slides p {
+	line-height: 110%;
+	margin: 0;
+	color: #90ADB8;
+}
+.slides li {
+	color: #90ADB8;
+}
+.slides p > span {
+	background: #000;
+}
+.reveal a {
+	border-bottom: 1px dotted #fd6b83;
+}
+.reveal a:hover {
+	border-bottom: 1px dotted #78bae6;
+}
+.reveal {
+	background: url("../images/bg.jpg");
+}
+/*.slides section {
+	border: 1px solid red;
+}*/
+.txt-w33 p {
+	float: left;
+	display: inline;
+	width: 33.33333%;
+}
+.lineheigh125 p {
+	line-height: 125%;
+}
+
+
+
+
+
+
