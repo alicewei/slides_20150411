@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>切版教學-逐步切版完成一個單頁式網站</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/slides_use.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>		
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>切版教學</h2>
+					<p>逐步切版完成一個單頁式網站</p>
+				</section>
+				<section>
+					<h2>介紹前端基本架構</h2>
+					<p>html , css , javascript（使用套件）</p>
+				</section>
+				<section>
+					<h2>html , css , javascript ?</h2>
+					<p class="fragment">比喻就像蓋房子</p>
+					<!--  要寫code的時候用的<pre><code data-trim contenteditable></code></pre> -->
+				</section>
+				<section class="txt-w33">
+					<img src="images/01.jpg">
+					<p>Html</p>
+					<p>Css</p>
+					<p>Javascript</p>
+				</section>
+				<section class="txt-w33">
+					<img src="images/01.jpg">
+					<p>架構</p>
+					<p>樣式外觀</p>
+					<p>功能</p>
+				</section>
+				<section>
+					<img src="images/02.png">
+					<p>這次切版網頁外觀</p>
+				</section>	
+				<section>				
+					<section>
+						<h2>Html基本樣貌</h2>
+						<img src="images/03.png">
+					</section>
+					<section>
+						<img src="images/04.png">
+						<p>用來宣告html版本</p>
+					</section>
+					<section>
+						<img src="images/05.png">
+						<p>包住所有內容、指定語系</p>
+					</section>
+					<section>
+						<img src="images/06.png">
+						<p>內容為網頁表頭</p>
+					</section>
+					<section>
+						<img src="images/07.png">
+						<p>編碼類型</p>
+					</section>
+					<section>
+						<img src="images/08.png">
+						<p>使用瀏覽器最新版本（例：避免ie相容模式）</p>
+					</section>
+					<section>
+						<img src="images/09.png">
+						<p>網頁標題</p>
+					</section>
+					<section>
+						<img src="images/10.png">
+						<p>網頁標頭前面的圖標icon</p>
+					</section>
+					<section>
+						<img src="images/11.png">
+						<p>讓其他裝置都能顯示更好</p>
+					</section>
+					<section>
+						<img src="images/12.png">
+						<p>外部連結Javascript</p>
+					</section>	
+					<section>
+						<img src="images/13.png">
+						<p>外部連結Css</p>
+					</section>
+					<section>
+						<img src="images/14.png">
+						<p>網頁呈現內容</p>
+					</section>
+					<section>
+						<img src="images/15.png">
+						<p>多數標籤都用 <span>< / ></span> 結束</p>
+					</section>
+					<section>
+						<img src="images/16.png">
+						<p>只有br、img、input不用</p>
+					</section>	
+					<section>
+						<img src="images/17.png">
+						<p>< !-- 這是註解 -- > </p>
+					</section>
+				</section>				
+				<section>
+					<section>
+						<h2>Css基本樣貌</h2>
+						<img src="images/18.png">
+						<p>在html本頁（上）、css外部連結檔內（下）</p>
+					</section>
+					<section>
+						<img src="images/19.png">
+						<p>css結構</p>
+					</section>
+					<section>
+						<h2>Css又分為id跟class</h2>
+						<ul>
+							<li>id在同文件內只能使用一次、class能重複使用</li>
+							<li class="fragment">id權重比class高，給予相同屬性不同屬性質時，顯示id的</li>
+							<li class="fragment">同份文件內class或id給予相同屬性不同屬性質時，顯示最下方的</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h2>Css能控制的項目</h2>
+						<ul>
+							<li>自訂選擇器：.icon { margin: 50px; }</li>
+							<li class="fragment">html內的元素：h1, h2, header, nav, footer...<br> input [type="text"] { ... }</li>
+						</ul>
+					</section>
+					<section>
+						<h2>css使用注意事項</h2>
+						<ul>
+							<li>不要使用html原有的元素為選擇器命名，避免混淆</li>
+							<li class="fragment">不要直接以名稱為選擇器命名，使用語意化、形容詞之類較靈活 例：紅色警示文字</li>
+							<li class="fragment">對於css來說命名大小寫不同的選擇器，是不同的兩個</li>
+							<li class="fragment">css在html內連套用兩個樣式時可以寫：</li>
+						</ul>
+							<pre class="fragment"><code data-trim contenteditable>
+< div class="icons" id="home">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or
+< div class="icons home">
+							</code></pre>
+					</section>
+					<section>
+						<h2>Css偽類（Pseudo-element）</h2>
+						<ul>
+						<li>:hover&nbsp;&nbsp;:active...&nbsp;&nbsp;這都是超連結樣式</li>
+						<li class="fragment">:before&nbsp;&nbsp;:after&nbsp;&nbsp;這是給元素前後定樣式</li>
+						<li class="fragment">:first-child&nbsp;&nbsp;:last-child <br>這是給一列元素的第一個、最後一個定樣式</li>
+						</ul>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h2>Javascript基本樣貌</h2>
+						<img src="images/20.png">
+					</section>
+					<section>
+						<img src="images/12.png">
+						<p>Javascript外部連結</p>
+					</section>				
+					<section>
+						<img src="images/21.png">
+						<p>Javascript寫在本頁</p>
+					</section>		
+					<section>
+						<img src="images/22.png">
+						<p>由於網頁是由上往下讀取的，<br>因此javascript給予動態需要網頁先找到目標才能運行，<br>避免時常找不到的問題，js往往寫在<span>< /body></span>內</p>
+					</section>														
+				</section>
+				<section>
+					<section>
+						<h2>進行切版前</h2>
+						<p>可以先知道一些事...</p>
+					</section>
+					<section>
+						<img src="images/23.png">	
+						<p>切版前檢視畫面有哪些元素（背景是否連續？飄浮元素？）</p>
+					</section>
+					<section>
+						<img src="images/24.png">
+						<p>切版方向由上至下、左至右</p>
+					</section>
+					<section>
+						<h2>盡量使用 html 語意化標籤</h2>
+						<p>能幫助網路seo搜尋<br>例：header、section、nav、h1、h2、footer</p>
+					</section>
+					<section>
+						<img src="images/25.png">
+						<p>切版用到的css Box Model概念</p>
+					</section>
+					<section class="lineheigh125">
+						<h2>小圖盡量存PNG、大圖存JPG</h2>
+						<ul>
+							<li>存png壓縮後資料較不失真，比jpg檔還清晰</li>
+							<li class="fragment">相對於大底圖存png檔案會很大，因此存jpg</li>
+							<li class="fragment">壓縮jpg：<a href="http://www.jpegmini.com/">http://www.jpegmini.com/</a><br>壓縮png：<a href="https://tinypng.com/">https://tinypng.com/</a></li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/27.png" alt="">
+						<p>可以有格線可對齊</p>
+					</section>
+					<section>
+						<img src="images/28.png" alt="">
+						<p><a href="http://gridcalculator.dk/#/1000/16/10/25">Grid Calculator</a></p>
+					</section>
+					<section>
+						<img src="images/29.png" alt="">
+						<p>安裝擴充套件<br>Chrome：<a href="https://chrome.google.com/webstore/detail/grid-system/mhdiagjmgbkgeeppcohbjboloihjljho?utm_source=plus">Grid System</a>&nbsp;&nbsp;&nbsp;Firefox：<a href="http://www.puidokas.com/portfolio/gridfox/">GridFox</a></p>
+					</section>										
+					<section>
+						<img src="images/26.png" alt="">
+						<p>瀏覽器預設值會影響css，使用reset讓預設值統一歸零</p>
+					</section>
+					<section>
+						<h2>休息10分鐘後開始切版</h2>
+						<p>沒有Ps軟體無所謂，可直接用images資料夾</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>讓form表有真正功能</h2>
+						<p>使用google doc表單</p>	
+					</section>
+				</section>
+			</div>
+		</div><!-- reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				center: true,
+				// rtl: true,
+
+				transition: 'concave',
+				// transitionSpeed: 'slow',
+				// backgroundTransition: 'slide'
+
+				// Optional reveal.js plugins
+				dependencies: [
+					// { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// { src: 'plugin/zoom-js/zoom.js', async: true },
+					// { src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
